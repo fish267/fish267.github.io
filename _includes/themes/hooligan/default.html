@@ -92,25 +92,21 @@
                   </a>
                 </li>
               {% endif %}                    
-              {% if site.author.feedburner %}
-                <li>
-                  <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial rss icon" target="_blank">
-                    <span class="hidden-desktop">FeedBurner</span>
-                  </a>
-                </li>
-              {% endif %}
             </ul>
           </div>
         </div>
       </div>
     </div>
-
+<!--article list-->
     <div class="container">
       <div class="content">
         {{ content }}
       </div>
+<!--侧边栏-- >
 
-      <footer>
+<!--foot-->
+      <footer align = 'center'>
+        <hr>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
