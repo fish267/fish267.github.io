@@ -14,8 +14,7 @@ author :
   name : Fish 
   email : fsh267@gmail.com 
   github : fish267 
-  twitter : username
-  feedburner : feedname
+  googleplus : fsh267 
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -74,6 +73,7 @@ JB :
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
+  about_path: /about.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
