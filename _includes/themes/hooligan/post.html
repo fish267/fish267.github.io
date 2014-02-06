@@ -33,15 +33,8 @@
       <h4>Published</h4>
       <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
     </section>
-    {% if page.category %}
-      <section>
-        <h4>Category</h4>
-        <span class="category">
-          {{ page.category }}
-        </span>
-      </section>
-    {% endif %}     
-    {% unless page.tags == empty %}
+  
+  {% unless page.tags == empty %}
       <section>
         <h4>Tags</h4>
         <ul class="tag_box">

@@ -1,0 +1,73 @@
+---
+layout: page
+title: What a wonderful world!
+---
+{% include JB/setup %}
+<hr>
+
+<!--文章列表-->
+<div id = 'article_list'  style = 'float: left'>
+	<h2 align = 'center'><b>Article List</b></h2><br>
+<ul class="posts" >
+  {% for post in paginator.posts %}
+    <li><h3><span>{{ post.date | date_to_string }}</span> &raquo;&nbsp; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3></li>
+  {% endfor %}
+</ul>
+
+
+<!--分页用的-->
+<div id="pagination" align = 'center' >
+<div class="pagenavi">
+<span class="page_number">第{{ paginator.page }}页/共{{ paginator.total_pages }}页</span>
+<a href="/">第一页</a>
+{% if paginator.previous_page %}
+{% if paginator.previous_page == 1 %}
+<a href="/" class="current"><<前一页</a>
+{% else %}
+<a href="/page{{paginator.previous_page}}"><<前一页</a>
+{% endif %}
+{% else %}
+<span><<前一页</span>
+{% endif %}
+{% for count in (2..paginator.total_pages) limit:8 %}
+{% if count == paginator.page %}
+<span class="current-page">{{count}}</span>
+{% else %}
+<a href="/page{{count}}">{{count}}</a>
+{% endif %}
+{% endfor %}
+
+{% if paginator.next_page %}
+<a href="/page{{paginator.next_page}}">后一页>></a>
+{% else %}
+<span>后一页>></span>
+{% endif %}
+<a href="/page{{paginator.total_pages}}">最后一页</a>
+</div>
+</div>
+</div>
+<!-- 垂直分割线-->
+
+<!--近期文章-->
+
+<div style = 'float: right'>
+
+	<br>
+	<h3><b>Recent Posts</b></h3>
+	<ul>{% for rpost in site.posts limit: 10 %}
+	<li>
+	<a href=" ">{{ rpost.title }}</a>
+	</li>
+	{% endfor %}
+	</ul>
+
+
+	<div id="recent_comments">
+    <h3><b>Recent Comments</b></h3>
+
+    <div class="comment_list">
+        <script type="text/javascript"
+                src="http://fish267.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=20"></script>
+    </div>
+</div>
+</div>
