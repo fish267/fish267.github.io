@@ -3,7 +3,6 @@ layout: page
 title: What a wonderful world !
 tagline: Love67
 ---
-{% include JB/setup %}
 
 {% for post in paginator.posts %}
 <div class="post-wrapper">
@@ -12,17 +11,18 @@ tagline: Love67
   </h2>
   <div class="entry-meta">
       <i class="icon-user"></i>  <span>{{ post.author }}</span> &nbsp;
-      <i class="icon-calendar"></i>  <span>{{ post.date | date:"%Y-%m-%d" }}</span> &nbsp;&nbsp;
-      {% unless post.categories == empty %}
-      
-        <i class = "icon-bookmark"></i>
+      <i class="icon-calendar"></i>  <span>{{ post.date | date:"%Y-%m-%d" }}</span> &nbsp;
+      {% unless post.categories == empty %}&nbsp;
+        <i class="icon-bookmark"></i>
         {% for category in post.categories %}
-          <a href = "/categories.html#{{ category }}-ref" target = "_blank">
-            <span class = "label post-category">{{ category }}</span></a>
+          <a href="/categories.html#{{ category }}-ref" target="_blank">
+            <span class="label post-category">{{ category }}</span>
+          </a>
         {% endfor %}
-        {% endunless %}
-  </div> 
-  <br />
+      {% endunless %}
+  
+  </div>
+  <br /><br />
   <div class="entry">
     {{ post.content | split: '<!--more-->' | first }}
     <p>
@@ -36,7 +36,7 @@ tagline: Love67
 {% endfor %}
 
 <!-- Pagination links -->
-<br>
+<br><br>
 <div class="paginate">
   <ul>
     <li class="single">page {{ paginator.page }} of {{ paginator.total_pages }}</li>
