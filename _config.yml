@@ -4,7 +4,7 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
-paginate: 15
+paginate: 25 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
@@ -14,7 +14,7 @@ author :
   name : Fish 
   email : fsh267@gmail.com 
   github : fish267 
-  googleplus : fsh267 
+  facebook : fish267
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
