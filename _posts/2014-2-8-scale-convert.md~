@@ -2,7 +2,7 @@
 author: Fish
 title: 十进制转化成其他进制
 categories: Python
-tags: algorithm acm
+tags: algorithm, acm
 layout: post
 ---
 是按正常的手算流程，取余数得来，使用了一个递归,**代码如下：**

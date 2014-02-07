@@ -4,7 +4,7 @@ comments: true
 layout: post
 title: Tkinter 使用小结
 categories: Python
-tags: tkinter gui notes
+tags: Tkinter gui notes
 ---
 
 ###很喜欢PyQt的，但是Tkinter作为Python自带的GUI库，还是不得不了解一下，挺简介方便的，一共包含了15个组件：

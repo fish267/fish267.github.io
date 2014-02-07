@@ -3,7 +3,7 @@ author: fish
 layout: post
 title: 基于Tkinter简单计算器
 categories: Python
-tags: tkinter gui
+tags: tkinter, gui
 ---
 
 **这个是小米系统的计算器界面：** 
