@@ -8,7 +8,7 @@ categories:
 tags: mysql crawl
 ---
 使用的BeautifulSoup库，比较小白，对于中文，有的页面需要添加<code>from_encoding = "GBK"</code>, 还有数据库的各种转码，比如<code>con.escape_string()</code>，这个问题卡了一下午＋一晚上，还是在StackOverFlow上撞到的解决方案, 以[腾讯新闻](http://tech.qq.com)为例： 
-
+<!--more-->
 {% highlight python %}
     # coding: utf-8
     # 文章信息保存到details_list中，包括标题，作者，发布时间，摘要，内容, 原地址
