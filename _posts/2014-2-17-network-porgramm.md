@@ -16,7 +16,7 @@ tags: socket, asynchat
 >地址族(默认是<code>socket.AF_INET</code>)<br>
 >流套接字(默认是<code>socket.SOCK_STREAM</code>)或数据报套接字<br>
 >使用的协议(默认是0)<br>
-
+<!--more-->
 
 服务器套接字使用<code>bind</code>方法后, 再调用<code>listen</code>方法去监听这个给定的地址.客户端使用<code>connect</code>方法连接到服务器,在<code>connect</code>方法中使用的地址与<code>bind</code>方法中使用的地址相同. 在这种情况下, 一个地址就是一个格式为<code>(host, port) </code>的元祖.
 
