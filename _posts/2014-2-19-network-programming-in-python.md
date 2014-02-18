@@ -33,7 +33,7 @@ import socket # for sockets
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print 'Scoket created!'
 {% endhighlight %}
-
+<!--more-->
 函数<code>socket.socket</code>创建一个 socket 并且返回 socket 描述符,  用于其他相关的 socket 函数
 
 
