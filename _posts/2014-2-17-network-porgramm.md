@@ -38,10 +38,10 @@ s.bind((host, port))
 s.listen(5)
 
 while True:
-	c, addr = s.accept()
-	print "got connect from", addr
-	c.send("hello, client!")
-	c.close()
+    c, addr = s.accept()
+    print "got connect from", addr
+    c.send("hello, client!")
+    c.close()
 {% endhighlight %}
 ###一个小型客户机
 {% highlight python %}
