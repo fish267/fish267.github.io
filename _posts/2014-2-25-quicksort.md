@@ -99,9 +99,9 @@ int main()
 {% highlight cpp %}
 #include<iostream>
 #include<stack>
-
 using namespace std;
-
+/* Len函数, 获取数组元素个数 
+*/
 template<class T>
 int Len(const T &Array){
     if(sizeof(Array) == 0)
@@ -109,10 +109,14 @@ int Len(const T &Array){
     else
         return sizeof(Array) / sizeof(Array[0]);
 }
-
-template<class T>
+/* display 函数
+    @param Type *Array--任意类型数组的首地址
+    @param int len--数组的元素个数
+    @void -- 空数组输出None, 非空输出元素
+*/
+template< class T >
 void display(const T &Array){
-    if(Len(Array) == 0)
+    if (Len(Array) == 0)
         cout << "None" << endl;
     else{
         for(int i = 0; i != Len(Array); i++)
@@ -120,17 +124,24 @@ void display(const T &Array){
         cout << endl;
     }
 }
-
-template<class T>
-void Swap(T *pArray, int p, int q){
-    T temp = *(pArray + p);
+/* Swap函数
+    @void -- 数组地址, 以及要交换的两个位置
+*/
+template< class Type >
+void Swap(Type *pArray, int p, int q){
+    Type temp = *(pArray + p);
     *(pArray + p) = *(pArray + q);
     *(pArray + q) = temp;
 }
-
-template< class T >
-int Split(T *pArray, int startIndex, int endIndex){
-    T x = pArray[startIndex];
+/* 分割函数
+    @param Type *pArray--数组首地址
+    @param int left--a[p:left] 小于
+    @param int right--a[j:right] 大于
+    @return int select--返回分界数据
+*/
+template< class Type >
+int Split(Type *pArray, int startIndex, int endIndex){
+    Type x = pArray[startIndex];
     while(startIndex < endIndex){
         while(pArray[startIndex] < x)
             startIndex++;
@@ -143,7 +154,6 @@ int Split(T *pArray, int startIndex, int endIndex){
     }
     return endIndex;
 }
-
 template< class T>
 void QuickSort(T *pArray, int start, int end){
     stack< T > st;
@@ -184,9 +194,9 @@ int main(){
     return 0;
 }
 {% endhighlight %}
+
 #END
 比较来看, 使用堆栈不怎么省事... 因该是程序太简单了!
 
 
 理论上, 递归算法的栈是程序自动生成的, 程序定义的局部变量都存放到栈中, 如果程序复杂, 栈就会很大, 在递归调用时, 需要先进行栈操作. 因此效率就低. 
-
