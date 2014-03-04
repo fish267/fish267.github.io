@@ -47,7 +47,7 @@ void swap(int *array, int pos1, int pos2){
     array[pos1] = array[pos2];
     array[pos2] = temp;
 }
-/************************************/
+//
 void BubbleSort(int array[], int len){
     for(int i = 0; i < len - 1; i++)
         for(int j = i + 1; j < len; j ++){
@@ -55,7 +55,7 @@ void BubbleSort(int array[], int len){
                 swap(array, i, j);
         }
 }
-/************************************/
+//
 void SelectSort(int *array, int len){
     for(int i = 0; i < len - 1; i++){
         for(int j = i + 1; j < len; j++){
@@ -65,14 +65,14 @@ void SelectSort(int *array, int len){
         }
     }
 }
-/************************************/
+//
 void InsertSort(int *array, int len){
     for(int j  = 1; j  < len; j++){
         for(; j >= 0 && array[j - 1] > array[j]; j--)
             swap(array, j , j - 1);
     }
 }
-/************************************/
+//
 int Split(int *array, int start, int end){
     int temp = array[end];
     while(start < end){
@@ -95,14 +95,14 @@ void QuickSort(int *array, int start,  int len){
         QuickSort(array, temp + 1, end);
     }
 }
-/************************************/
+//
 void ShellSort(int *array, int len){
     for(int gap = len / 2; gap > 0; gap /= 2)
         for(int i = gap; i< len; i++)
             for(int j = i - gap; j >=0 && array[j] > array[j + gap]; j -= gap)
                 swap(array, j, j + gap);
 }
-/************************************
+/*
 fake code:
 go on mergesort:
     if n < 2:
@@ -111,7 +111,7 @@ go on mergesort:
         sort the left half
         sort the right half
         merge two above
-*************************************/
+*/
 void MergeArray(int *array, int start, int mid, int end){
     int *p = new int[end - start + 1];
     int i = start, j = mid + 1;
@@ -135,7 +135,6 @@ void MergeSort(int *array, int start, int end){
     }
     
 }
-/************************************/
 //还没看懂,稍后补充
 void BuildMaxHeap(int p[], int size);
 void DeleteMax(int p[], int size);
@@ -182,7 +181,7 @@ void PercolateDown(int array[],int hole, int size)
     }
     array[hole] = tmp;
 }
-/*************************************************************/
+//
 int main(){
     int *array = new int[15];
     initArray(array,15, 100);
