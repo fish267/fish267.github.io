@@ -10,7 +10,6 @@ tags: algorithm
 
 具体的排序算法介绍, 随后补充, 今天先贴代码, 注释和解释有空了添加进来:
 <!--more-->
-
 {% highlight cpp %}
 #include <iostream>
 #include <cstdlib>

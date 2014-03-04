@@ -3,7 +3,7 @@ author: Fish
 layout: post
 title: 网络编程笔记
 categories: Python
-tags: socket, asynchat
+tags: socket asynchat
 ---
 #socket 模块
 在网络编程中的一个基本组件就是**套接字**(socket).套接字主要是两个程序之间的"信息通道"
