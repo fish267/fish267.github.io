@@ -20,7 +20,7 @@ tags: linux
 
 <!--more-->
 在 free 命令添加参数 -m ,是以 MB 单位现实内存的大小， 很明显， 我们需要的是第二行 Mem 的前两列数据。使用管道命令，
-<code>grep -i mem</code>, -i 是忽略大小写。
+<code>grep -i mem</code>, <code>-i </code> 是忽略大小写。
 
 	Mem:       3857400    2868708     988692          0     288856    1322584
 
