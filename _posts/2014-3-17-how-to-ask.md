@@ -9,6 +9,6 @@ tags: experience
 
 
 很多事情的处理, 都无处不影射着自己的为人, 下面这个大图谱是关于提问的总结:
-
+<!--more-->
 
 ![](http://wiki.woodpecker.org.cn/moin/AskForHelp?action=AttachFile&do=get&target=question.jpeg)
