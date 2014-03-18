@@ -1,0 +1,41 @@
+---
+layout: post
+author: Fish
+title: Linux下vim bash初始化脚本
+categories: Python
+tags: tools
+---
+每次换个操作环境, 都得按自己的习惯重新搭配搭配, 尤其是公司里, 这么多虚拟机, 我使用 vim 有点强迫症.
+
+写了个 Python 小脚本, 针对 ubuntu 系统写的, 可以一次搞定 vim 配置和 bash 下 alias 的设定! 给自己赞一个~
+
+{% highlight python %}
+#!/usr/bin/python
+#coding: utf-8
+#get_ready for my linux env
+import os
+import subprocess
+import re
+#get vim ready
+#suggest you have already installed vim
+global vim_backup
+global bash_backup
+# config .vimrc to suit needs
+def config_vim(vim_file):
+    #make a copy of that
+        global vim_backup
+            vim_backup = vim_file + '.backup'
+                os.system('cp %s %s' %(vim_file, vim_backup))
+                    #if these are not in .vimrc, add it!
+                        add_commands = ['set smartcase', 'set mouse=a', 'set autoindent', 'set smartindent', \
+                        'set nu', 'set ts=4', 'set shiftwidth=4', 'set softtabstop=4',\
+                        'set expandtab', 'set smarttab']
+                         
+                             vim_content = open(vim_file).read()
+                                 for command in add_commands:
+                                             if command not in vim_content:
+                                                             os.system('echo >> %s "%s"' %(vim_file, command))
+                                                                 #sure these blow are not in .vimrc, just add that
+                                                                     map_brackets = '''
+                                                                     inoremap 
+{% endhighlight %}
