@@ -10,6 +10,8 @@ tags: tools
 写了个 Python 小脚本, 针对 ubuntu 系统写的, 可以一次搞定 vim 配置和 bash 下 alias 的设定! 给自己赞一个~
 
 主要是 vim 的括号匹配, tab 键设置, 自动对其, 还有 bash 下省事的操作等功能, 所以说, **世界是靠懒人推动的!**
+
+root 用户的配置在 <code>/etc/**</code>, 普通用户的配置文件在 <code>/home/**</code>, 对应的修改<code>locate_file</code>函数即可
 <!--more-->
 {% highlight python %}
 #!/usr/bin/python
@@ -30,7 +32,7 @@ def config_vim(vim_file):
     os.system('cp %s %s' %(vim_file, vim_backup))
     #if these are not in .vimrc, add it!
     add_commands = ['set smartcase', 'set mouse=a', 'set autoindent', 'set smartindent', \
-'set nu', 'set ts=4', 'set shiftwidth=4', 'set softtabstop=4',\
+'set nu', 'set ts=4', 'colorscheme elflord', 'set shiftwidth=4', 'set softtabstop=4',\
 'set expandtab', 'set smarttab']
  
     vim_content = open(vim_file).read()
@@ -42,7 +44,7 @@ def config_vim(vim_file):
 inoremap jk <ESC>:w
 inoremap ( ()<ESC>i
 inoremap ) <c-r>=ClosePair(')')<CR>
-#inoremap { {<CR>}<ESC>kA<CR>
+"inoremap { {<CR>}<ESC>kA<CR>
 inoremap } <c-r>=ClosePair('}')<CR>
 inoremap [ []<ESC>i
 inoremap ] <c-r>=ClosePair(']')<CR>
