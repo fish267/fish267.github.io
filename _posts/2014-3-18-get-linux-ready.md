@@ -11,7 +11,7 @@ tags: tools
 
 主要是 vim 的括号匹配, tab 键设置, 自动对其, 还有 bash 下省事的操作等功能, 所以说, **世界是靠懒人推动的!**
 
-root 用户的配置在 <code>/etc/**</code>, 普通用户的配置文件在 <code>/home/**</code>, 对应的修改<code>locate_file</code>函数即可
+root 用户的配置在 <code>/etc/...</code>, 普通用户的配置文件在 <code>/home/...</code>, 对应的修改<code>locate_file</code>函数即可
 <!--more-->
 {% highlight python %}
 #!/usr/bin/python
