@@ -9,7 +9,7 @@ tags: algorithm
 <!--more-->
 
 包括冒泡， 插入， 选择， 归并， 快排， 堆排， 二叉树排， 桶排。 代码如下:<br>  
-{% highlifht python %}
+{% highlight python %}
 #coding: utf-8
 import random
 import time
