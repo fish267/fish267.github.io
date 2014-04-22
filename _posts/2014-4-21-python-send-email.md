@@ -10,12 +10,12 @@ tags: email
 <!--more-->
 比较闹心的是， 使用<code>smtplib</code>模块登陆Gmail, 只能用<code>python **.py **</code> 执行， 不可以修改权限后 <code>./**.py</code> 执行， 否则会爆出如下错误：
 
-{% highlight python %}
- File "/usr/lib64/python2.4/smtplib.py", line 550, in login
- raise SMTPException("SMTP AUTH extension not supported by server.")
- smtplib.SMTPException: SMTP AUTH extension not supported by server.
+<pre>
+File "/usr/lib64/python2.4/smtplib.py", line 550, in login
+raise SMTPException("SMTP AUTH extension not supported by server.")
+smtplib.SMTPException: SMTP AUTH extension not supported by server.
 
-{% endhighlight %}
+</pre>
 
 就这个东西，卡了我好几个小时！！
 
