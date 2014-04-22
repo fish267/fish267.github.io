@@ -25,13 +25,13 @@ smtplib.SMTPException: SMTP AUTH extension not supported by server.
 import sys
 import smtplib
 #init server
-USAGE = '''
+USAGE = ''
 The usages are blow:
 
 python mailto **@xx.com -t 'this is title' -c 'this is content'
 or
 python mailto **@xx.com -c 'this is content'
-'''
+''
 
 SERVER = 'smtp.gmail.com'
 PORT = 587
