@@ -28,9 +28,9 @@ import smtplib
 USAGE = ''
 The usages are blow:
 
-python mailto **@xx.com -t 'this is title' -c 'this is content'
+python mailto *@xx.com -t 'this is title' -c 'this is content'
 or
-python mailto **@xx.com -c 'this is content'
+python mailto *@xx.com -c 'this is content'
 ''
 
 SERVER = 'smtp.gmail.com'
