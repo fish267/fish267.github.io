@@ -1,11 +1,15 @@
 ---
-author: fish
+author: Fish 
 layout: post
 title: 各种排序的Python实现
 categories: Python
 tags: algorithm
 ---
 
+在博客园上看到一个Python的排序文章， [文章地址](http://www.cnblogs.com/wiki-royzhang/p/3614694.html）， 作者讲解的非常详细， 想学习的可以去看他的。 我此处留个笔记， 部分算法是按照自己的理解写的。
+<!--more-->
+
+包括冒泡， 插入， 选择， 归并， 快排， 堆排， 二叉树排， 桶排。 代码如下:<br>  
 {% highlight python %}
 
 #coding: utf-8
@@ -27,7 +31,6 @@ print '*' * 100
 def check_len(l):
     if length == 0 or length == 1:
         return l
-####################################
 def bubbleSort(l):
     check_len(l)
     for i in xrange(len):
@@ -38,7 +41,6 @@ def bubbleSort(l):
                 l[j + 1] = tmp
     return l
 
-####################################
 def insertSort(l):
     check_len(l)
     for i in range(1, len):
@@ -48,7 +50,6 @@ def insertSort(l):
             l[i - 1] = tmp
             i -= 1
     return l
-####################################
 def selectSort(l):
     check_len(l)
     for i in xrange(len - 1):
@@ -58,7 +59,7 @@ def selectSort(l):
                 l[i] = l[j]
                 l[j] = tmp
     return l
-####################################
+
 def mergeSort(L,start,end):
     check_len(l)
     def merge(L,s,m,e):
@@ -82,7 +83,6 @@ def mergeSort(L,start,end):
         mergeSort(L,mid+1,end)
         merge(L,start,mid,end)
     return L
-####################################
 
 def quickSort(l):
     check_len(l)
@@ -91,7 +91,6 @@ def quickSort(l):
     left = [i for i in l[1:] if i < l[0]]
     right = [i for i in l[1:] if i >= l[0]]
     return quickSort(left) + [l[0],] + quickSort(right)
-####################################
 
 def MinHeapFixdown(l, i, n):
     temp = l[i]
@@ -121,8 +120,6 @@ def heapSort(l):
     print  l
 
 
-####################################
-#¹¹Ôìstruct
 class Node:
     def __init__(self, value = None, left = None, right = None):
         self.__value = value
@@ -178,7 +175,6 @@ def binaryTreeSort(l):
     b.Show()
     return b.result
 
-####################################
 def countSort(l):
     check_len(l)
     max_num = max(l)
@@ -192,7 +188,6 @@ def countSort(l):
                 res.append(k)
     return  res
 
-####################################
 #print heapSort(MakeMiniHeap(l, length))
 #print binaryTreeSort(l)
 #print countSort(l)
