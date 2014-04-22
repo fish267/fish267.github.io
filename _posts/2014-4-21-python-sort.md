@@ -7,6 +7,7 @@ tags: algorithm
 ---
 
 {% highlight python %}
+
 #coding: utf-8
 import random
 import time
