@@ -8,7 +8,7 @@ tags: email
 今天补充完测试用例， 正好有一大把空闲的时间， 可以用来个Python发送邮件的脚本， 最烦的就是登陆卡卡的Gmail, 发送邮件了。 登陆网页查询单词， 发送飞信等常用操作行为， 我尽量用Python搞定， 所以说， **世界是靠懒人推动的！**
 
 <!--more-->
-比较闹心的是， 使用<code>smtplib</code>模块登陆Gmail, 只能用<code>python **.py **</code> 执行， 不可以修改权限后 <code>./**.py</code> 执行， 否则会爆出如下错误：
+比较闹心的是， 使用<code>smtplib</code>模块登陆Gmail, 只能用<code>python *.py </code> 执行， 不可以修改权限后 <code>./*.py</code> 执行， 否则会爆出如下错误：
 
 {% highlight python %}
 smtplib.SMTPException: SMTP AUTH extension not supported by server.
