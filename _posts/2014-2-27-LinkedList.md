@@ -12,6 +12,7 @@ tags: algorithm
 
 链表反转没有完成, 程序应该使用类来弄的, 没有实现..CODE 如下:
 <!--more-->
+<br>
 {% highlight cpp %}
 #include <iostream>
 using namespace std;
