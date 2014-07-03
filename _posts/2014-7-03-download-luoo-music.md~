@@ -1,0 +1,15 @@
+---
+author: fish
+layout: post
+title:  下载落网音乐 
+categories: linux 
+tags: python 
+---
+本来是在百度网盘上看到落网的一个音乐下载的，目录看着不爽，也懒得调整了，写了个下载脚本，纯单线程下载
+
+
+主要得益于落网网站源码中包含了下载地址, 用正则匹配出来就可以了
+
+<!--more-->
+{% highlight python %}
+
