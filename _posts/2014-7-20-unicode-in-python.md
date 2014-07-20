@@ -28,6 +28,7 @@ def unicode_init(obj, encoding = 'utf-8'):
 
 这么处理，是先将不同的编码格式，统一成unicode,然后在输出的时候，再变回去。
 
+<!--more-->
 ##举个例子
 比如下面这个页面，如果直接读取并输出到命令窗，会有堆乱码
 {% highlight python %}
