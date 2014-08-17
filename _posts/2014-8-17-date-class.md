@@ -17,8 +17,8 @@ tags: algorithm
 私有成员函数:
 
 - leap(int)
-- dton(Date &) // 指定日期到0-0-0开始的天数
-- ntod(int)    // 将天数转换成日期
+- dton(Date &)  指定日期到0-0-0开始的天数
+- ntod(int)     将天数转换成日期
 
 <!--more-->
 程序如下：
@@ -143,6 +143,7 @@ int main(){
     cout << d - then << endl;
     return 0;
 }
+
 {% endhighlight %}
 
 #END
