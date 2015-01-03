@@ -121,6 +121,7 @@ if __name__ == '__main__':
             stdout = subprocess.PIPE, shell = True).stdout.read()
 {% endhighlight %}
 
+{% highlight python %}
 
 set smartcase
 set mouse=a
@@ -163,3 +164,4 @@ alias df="df -h"
 alias gmt="git commit -m"
 alias ga="git add ."
 alias gp="git push"
+{% endhighlight %}
