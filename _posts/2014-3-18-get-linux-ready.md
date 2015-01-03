@@ -120,3 +120,46 @@ if __name__ == '__main__':
         print subprocess.Popen('diff %s %s' %(bash_location, bash_backup), \
             stdout = subprocess.PIPE, shell = True).stdout.read()
 {% endhighlight %}
+
+
+set smartcase
+set mouse=a
+set autoindent
+set smartindent
+set nu
+set ts=4
+colorscheme elflord
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+inoremap jk <ESC>:w
+inoremap ( ()<ESC>i
+inoremap ) <c-r>=ClosePair(')')<CR>
+"inoremap { {<CR>}<ESC>kA<CR>
+inoremap } <c-r>=ClosePair('}')<CR>
+inoremap [ []<ESC>i
+inoremap ] <c-r>=ClosePair(']')<CR>
+function ClosePair(char)
+    if getline('.')[col('.')-1 ]== a:char
+        return "\<Right>"
+    else
+        return a:char
+
+    endif
+endf
+vmap <C-X> :s/^/#/<CR>
+vmap XX :s/^##*//<CR>
+
+<hr>
+
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+alias ..="cd .."
+alias cp="cp -v"
+alias mv="mv -v"
+alias df="df -h"
+alias gmt="git commit -m"
+alias ga="git add ."
+alias gp="git push"
