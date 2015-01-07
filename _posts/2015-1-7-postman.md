@@ -7,7 +7,7 @@ tags: python
 ---
 之前在绿盟科技实习时，就经常在Django后端和Ajax进行大量的通信。后来很多场景需要进行测试，比如Chorme上的Postman插件和Firefox的Restful拓展。
 
-在开源社区上看到了有人写了一个UI界面的，http://www.oschina.net/code/snippet_1438043_44720。但是没有后端代码，参考github上的代码和原来项目中经常使用的手段，先写一个后端的，以后用的到。
+在开源社区上看到了有人写了一个UI界面的，http://www.oschina.net/code/snippet_1438043_44720。但是没有后端代码，参考github上的代码和原来项目中经常使用的手段，修改完成后端，重复发明轮子，以后应该用的到。
 
 <!--more-->
 
