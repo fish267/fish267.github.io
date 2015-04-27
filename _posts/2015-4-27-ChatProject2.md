@@ -182,7 +182,7 @@ public class ChatClient extends Frame {
         }
     }
 }
-{% highlight %}
+{% endhighlight %}
 
 <b>ChatServer.java </b>
 {% highlight java %}
