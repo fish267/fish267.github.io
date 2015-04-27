@@ -227,7 +227,7 @@ public class ChatServer {
 Finally we could talk to server via chatclient, some bugs such as "Closing windows causes exception" are omitted. It is a pitty that only one client is allowd to chat. In this version we gonna fix it based on multiThread.
 
 <b>ChatSever.java </b>
-{% highlight java }%
+{% highlight java %} 
 package Chat;
 
 import java.io.*;
