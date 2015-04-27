@@ -9,7 +9,7 @@ I have not installed the Chinese input method. It is really cool to write this b
 It is a simple chat project implemented by java. I followed the MSB java tutorial and I am here to say thank you to the graceful teather.
 
 
-### 1. Init a chat window
+## 1. Init a chat window
 
 The first version is about to init a GUI window, it is so simple that you could not close it on clicking the X button. Based on the package Frame.
 {% highlight java %}
@@ -35,7 +35,9 @@ public class ChatClient extends Frame{
 
 {% endhighlight %}
 
-### 2. Add a closing function.
+<!--more-->
+
+## 2. Add a closing function.
 
 Package java.awt.event.* should be imported. Then give the window a listener.
 {% highlight java %}
@@ -69,7 +71,7 @@ public class ChatClient extends Frame() {
 }
 {% endhighlight %}
 
-### 3. Make textarea showing the content.
+## 3. Make textarea showing the content.
 
 We are still on the beginning, and we try to let textare show what we typed int the textField.
 
@@ -115,7 +117,7 @@ public class ChatClient() extends Frame {
 {% endhighlight %}
 
 
-### 4. Start a server
+## 4. Start a server
 
 In last version we created a simple chat client which can be closed and can show the content we typed in. Now let us start to create the server based on java.net.*.
 
@@ -144,7 +146,7 @@ public class ChatServer {
 {% endhighlight %}
 
 
-### 5. Let chatclient connect to chatserver
+## 5. Let chatclient connect to chatserver
 
 Write a ClientSocket which can connect to ServerSocket.
 
