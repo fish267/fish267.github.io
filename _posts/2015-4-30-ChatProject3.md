@@ -7,7 +7,9 @@ tags: java
 ---
 This is the final version of the chat project, here we modified the chatclient.java using multithread. 
 <b>Chatlient.java</b>
+
 {% highlight java %}
+
 package Chat;
 
 import java.awt.BorderLayout;
@@ -135,6 +137,7 @@ public class ChatClient extends Frame {
 <!--more-->
 
 ##<b>ChatServer.java</b>
+
 {% highlight java %}
 package Chat;
 
@@ -227,15 +230,6 @@ public class ChatServer {
                         Client c = clients.get(i);
                         c.send(str);
                     }
-                    /*
-                     * for(Iterator<Client> it = clients.iterator();
-                     * it.hasNext(); ) { Client c = it.next(); c.send(str); }
-                     */
-                    /*
-                     * Iterator<Client> it = clients.iterator();
-                     * while(it.hasNext()) { Client c = it.next(); c.send(str);
-                     * }
-                     */
                 }
             } catch (EOFException e) {
                 System.out.println("Client closed!");
