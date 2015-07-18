@@ -21,6 +21,7 @@ True
 ['', '/usr/lib64/python26.zip', '/usr/lib64/python2.6', '/usr/lib64/python2.6/plat-linux2', '/usr/lib64/python2.6/lib-tk', '/usr/lib64/python2.6/lib-old', '/usr/lib64/python2.6/lib-dynload', '/usr/lib64/python2.6/site-packages', '/usr/lib64/python2.6/site-packages/gtk-2.0', '/usr/lib/python2.6/site-packages', '/home/admin/git']
 {% endhighlight %}
 类似windows系统变量，在查询时，也是按照列表的顺序进行遍历
+<!--more-->
 ##2. 模块查询和加载
 参考[python PEP302][1]，详细讲解了如何导入钩子机制，简单分为了两步模块导入和模块加载
 
