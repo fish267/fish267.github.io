@@ -7,13 +7,13 @@ tags: linux
 ---
 
 执行该命令时，提示需要输入密码，谷歌了一下发现有expect这个工具，可以进行脚本自动交互，填入数据。直接贴个简单登录代码，后面部分可以忽略不看:
-``` shell
+{% highlight python %}  
 #!/usr/bin/expect  -f
 spawn ssh root@$facecode.org
 expect "password:"
 send "xxoo\r"
 interact
-```
+{% endhighlight %}
 <!--more-->
 ## 1. expect 是什么
 **expect是用来和shell进行自动交互的**。比如ssh server需要手动输入passwd，用expect就能自动登录了。
@@ -22,13 +22,13 @@ interact
 ###2.1 **安装expect**
 {% highlight python %}    
 yum install expect 
-```
+{% endhighlight %}
 另外，执行
 {% highlight python %}    
 $ which expect
 /usr/bin/expect
 {% endhighlight %}
-可以找到执行路径，类似python shell文件，需要在第一行添加 ```#!/usr/bin/expect  -f```命令
+可以找到执行路径，类似python shell文件，需要在第一行添加 ```#!/usr/bin/expect  ```命令
 ###2.2  **编辑脚本**
 {% highlight python %}    
 #!/usr/bin/expect  
