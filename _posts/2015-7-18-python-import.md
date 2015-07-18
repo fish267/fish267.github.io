@@ -10,7 +10,7 @@ Java和Python玩家对import关键字一点都不陌生，本文以python为例�
 ##1. 环境变量
 可以猜到，在import模块时，python会从环境变量中搜索需要加载的模块，这个列表就存放在sys.path变量中，可以进行修改。想要引入时，首先要将路径放到环境变量中。
 对环境变量临时修改，将```/home/admin/git```添加进来，示例如下:
-```bash
+{% highlight bash %}
 >>> import sys
 >>> '/home/admin/git' in sys.path
 False
@@ -19,7 +19,7 @@ False
 True
 >>> print sys.path
 ['', '/usr/lib64/python26.zip', '/usr/lib64/python2.6', '/usr/lib64/python2.6/plat-linux2', '/usr/lib64/python2.6/lib-tk', '/usr/lib64/python2.6/lib-old', '/usr/lib64/python2.6/lib-dynload', '/usr/lib64/python2.6/site-packages', '/usr/lib64/python2.6/site-packages/gtk-2.0', '/usr/lib/python2.6/site-packages', '/home/admin/git']
-```
+{% endhighlight %}
 类似windows系统变量，在查询时，也是按照列表的顺序进行遍历
 ##2. 模块查询和加载
 参考[python PEP302][1]，详细讲解了如何导入钩子机制，简单分为了两步模块导入和模块加载
@@ -31,7 +31,7 @@ True
 ###2.1  **finder.find_module**实现
 这个很容易理解，文件查询而已，有的是.py文件，有的是带目录package的。
 
-```python
+{% highlight python %}
 import sys
 import os
 class ModuleFinder:
@@ -52,23 +52,24 @@ class ModuleFinder:
         path = self.find_on_path(fullname)
         if path:
             do_something_else()
-```
-测试代码和结果如下:
-```python
+{% endhighlight %}
+测试代码:
+{% highlight python %}
 # test case
 f = ModuleFinder()
 f.find_module('os')
 f.find_module('urllib')
 f.find_module('json')
-```
-```bash
+{% endhighlight %}
+结果如下:
+{% highlight python %}
 /usr/lib64/python2.6/os.py
 /usr/lib64/python2.6/urllib.py
 /usr/lib64/python2.6/json/__init__.py
-```                                                                                                                                                                                  
+{% endhighlight %}                                                                                                                                                                         
 ##2.2 loader.load_module的实现
 在[PEP302][2]中，给出了一个简单的模块加载器:
-```python
+{% highlight python %}
 # Consider using importlib.util.module_for_loader() to handle
 # most of these details for you.
 def load_module(self, fullname):
@@ -84,16 +85,16 @@ def load_module(self, fullname):
         mod.__package__ = fullname.rpartition('.')[0]
     exec(code, mod.__dict__)
     return mod
-```
+{% endhighlight %}       
 将这个函数补充完善一下, 其中```import_file_to_module```是将源码弄成Python模块对象并返回，还有，要将模块的各类属性给塞进去。以```json```为例，他的属性列表(两个'_'开头结尾的）如下:
-```bash
+{% highlight python %}
 >>> import json
 >>> dir(json)
 ['JSONDecoder', 'JSONEncoder', '__all__', '__author__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '__path__', '__version__', '_default_decoder', '_default_encoder', 'decoder', 'dump', 'dumps', 'encoder', 'load', 'loads', 'scanner']
 >>>
-```
+{% endhighlight %}
 具体加载器实现如下：
-```python
+{% highlight python %}
 class ModuleLoader(object):
     def __init__(self, path):
         self.path = path
@@ -134,7 +135,7 @@ class ModuleLoader(object):
             
         sys.modules[fullname] = mod
         return mod
-```
+{% endhighlight %}
 
 用的最多的东西反而最容易被忽视，比如C语言printf()，C++的cout，Ruby的Require等等。
 拿来玩一玩，跟挖宝一样，蛮有意思的~~
