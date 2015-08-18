@@ -46,7 +46,7 @@ Python! 毫无疑问，<b>PEP8</b>， 参考地址 [PEP 0008 -- Style Guide for 
 
 说了这么多， 用 pep8 这个工具就行。
 
-{% hightlight shell %}
+{% highlight shell %}
 root@bimeizi:~/meizi.com# pip install pep8
 Downloading/unpacking pep8
   Downloading pep8-1.6.2-py2.py3-none-any.whl (40kB): 40kB downloaded
