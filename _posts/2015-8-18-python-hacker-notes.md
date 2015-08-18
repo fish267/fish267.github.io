@@ -46,7 +46,8 @@ Python! 毫无疑问，<b>PEP8</b>， 参考地址 [PEP 0008 -- Style Guide for 
 
 说了这么多， 用 pep8 这个工具就行。
 
-{% highlight shell %}
+{% highlight python %}
+
 root@bimeizi:~/meizi.com# pip install pep8
 Downloading/unpacking pep8
   Downloading pep8-1.6.2-py2.py3-none-any.whl (40kB): 40kB downloaded
@@ -59,6 +60,7 @@ meizi.py:12:1: E265 block comment should start with '# '
 meizi.py:16:1: E265 block comment should start with '# '
 meizi.py:18:13: E251 unexpected spaces around keyword / parameter equals
 meizi.py:18:15: E251 unexpected spaces around keyword / parameter equals
+
 {% endhighlight %}
 
 # 模块、系统、文档
