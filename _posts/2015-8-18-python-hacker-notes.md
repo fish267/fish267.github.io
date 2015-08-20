@@ -32,7 +32,8 @@ tags: Linux
 
 Python! 毫无疑问，<b>PEP8</b>， 参考地址 [PEP 0008 -- Style Guide for Python Code][3]
 
-还有个译文版！ 真赞 ！！  [<译> PEP 8 - Python 编码风格指南][4]
+还有个译文版！ 真赞 ！！  [译 PEP 8 - Python 编码风格指南][4]
+
 <!--more-->
 具体如下：
 
@@ -81,10 +82,9 @@ meizi.py:18:15: E251 unexpected spaces around keyword / parameter equals
 * 一些链接（Github, Google Email, Wiki, Bug 等）
 
 ## 3. Read The Docs
-用这个生成的文档，颜值非常高！比如
- [金融云产品技术文档目录][6]
+用这个生成的文档，颜值非常高！比如这个
 
-这个 [http://savu.readthedocs.org/en/latest/user/?highlight=pip][7]
+ [http://savu.readthedocs.org/en/latest/user/?highlight=pip][7]
 
 [Read The Docs][8]  可以自动在线生成和发布文档， 可以搜索 Sphinx 配置文件， 构建文档， 以后写开源项目， 简直是 Github 的完美搭配~
 
