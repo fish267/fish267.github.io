@@ -6,7 +6,9 @@ categories: Linux
 tags: python
 ---
 本文内容来自，慕课网廖老师 Python 课程，地址： http://www.imooc.com/learn/317
+
 #高阶函数
+
 将函数当做入参：
 {% highlight python %}
 def half(c): return c / 2.0
@@ -16,6 +18,7 @@ print(test(2, 8, half))
 {% endhighlight %}
 
 ###Map
+
 
 map()是 Python 内置的高阶函数，它接收一个函数 f 和一个 list，并通过把函数 f 依次作用在 list 的每个元素上，得到一个新的 list 并返回。
 
@@ -29,6 +32,7 @@ print map(f, [1, 2, 3])
 {% endhighlight %}
 
 ###Reduce
+
 reduce()函数也是Python内置的一个高阶函数。reduce()函数接收的参数和 map()类似，一个函数 f，一个list，但行为和 map()不同，reduce()传入的函数 f 必须接收两个参数，reduce()对list的每个元素反复调用函数f，并返回最终结果值。
 
 {% highlight python %}
