@@ -48,6 +48,7 @@ Python 自1.5版本起增加了re 模块，它提供 Perl 风格的正则表达�
 
     re.search(pattern, string, flags=0)
 
+<!--more-->
 {% highlight python %}
 import re
 
