@@ -26,6 +26,7 @@ tags: crawl
 pip install beautifulsoup4
 ```
 
+<!--more-->
 ### 源码安装
 
 如果没有 <code>easy_install</code> 和 <code>pip</code>, 需要[下载源码](http://www.crummy.com/software/BeautifulSoup/bs4/download/4.0/), 使用 <code>setup.py</code> 来安装. 
