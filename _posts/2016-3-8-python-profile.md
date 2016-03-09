@@ -18,6 +18,8 @@ python3 xingneng.py  4.64s user 0.02s system 99% cpu 4.698 total
 
 在<code>python3</code>中, <code>hotshot</code>已经被废弃了, 如果没有特殊需求, 建议使用 <code>cProfile</code>. 本文简单介绍下使用 <code>gprof2dot</code> 和 <code>cProfile</code> 分析 python 脚本性能. 
 
+<!--more-->
+
 ## 1. cProfile 和 profile
 
 <code>cProfile</code> 和 <code>profile</code> 的用法基本相同, 一个是 C 实现的模块, 一个是 Python 实现的模块.
