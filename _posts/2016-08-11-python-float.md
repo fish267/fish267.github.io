@@ -152,4 +152,4 @@ def get_float_bin(x, n=50):
 3. [浮点数的精度](http://blog.chinaunix.net/xmlrpc.php?r=blog/article&uid=26731984&id=3110102)
 
 <hr>
-#### 希望 Wings 战队 Ti6 夺冠.
+##### 希望 Wings 战队 Ti6 夺冠.
