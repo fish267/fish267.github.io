@@ -12,10 +12,11 @@ group: navigation
 
 ##个人简介
 
-+ 08年离开山东, 就读于西安至今
++ 08年离开山东, 就读于西安
++ 12年离开西安, 杭州工作至今
 + 开源爱好者，喜爱Linux，Vim万岁
 + 爱读书，爱运动，爱订阅博客
-+ 喜欢coding，享受青轴
++ 享受青轴, Coding to change life for better!
 + Life is short, enjoy python !
 
 ##联系方式
