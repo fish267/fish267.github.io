@@ -7,7 +7,7 @@ tags: algorithm acm
 ---
 
 测试工程中验证数据表, 为了省事, 直接登录到 Linux 执行命令 <code>mysql -u -p xx -e 'select * from xx'</code> 获取输出的内容.
-
+<!--more-->
 ```java
 package com.alipay.liuqi.common.utils;
 
