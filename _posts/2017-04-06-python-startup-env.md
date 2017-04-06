@@ -1,3 +1,11 @@
+---
+author: Fish
+layout: post
+title: Python 开发环境初始化配置
+categories: python
+tags: linux
+---
+
 ![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/1a3a8aa2821fbb5755599f8001264ce3/image.png)
 
 本文介绍在 Linux环境下, Python 环境开发需要配置的内容, 包括 python3 安装, virtualenv 配置, pip 等.
