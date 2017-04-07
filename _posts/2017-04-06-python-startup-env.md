@@ -26,7 +26,7 @@ tar -zxvf Python-3.6.1.tgz
 cd cd Python-3.6.1
 ./configure && make && sudo make install
 ```
-
+<!--more-->
 安装完成后, terminal 中输入 python3 就能打开解释器
 ```shell
 ![image](https://zos.alipayobjects.com/rmsportal/PszFisfZeCxdpmwrZhRL.png)
@@ -60,7 +60,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-<!--more-->
+
 ## 2. 安装包管理工具 pip
 
 ### 2.1 pip 介绍
