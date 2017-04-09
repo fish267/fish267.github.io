@@ -6,30 +6,6 @@ categories: python
 tags: linux
 ---
 
-![image](https://zos.alipayobjects.com/rmsportal/PszFisfZeCxdpmwrZhRL.png)
-
-本文介绍在 Linux环境下, Python 环境开发需要配置的内容, 包括 python3 安装, virtualenv 配置, pip 等.
-
-### 1. 源码安装 python3
-
-1. 首先去官网找到 source 地址, [Python Source Releases](https://www.python.org/downloads/source/), 以当前最新版本 <code>Python3.6.1</code> 为例, 打开该版本地址 [Python 3.6.1](https://www.python.org/downloads/release/python-361/)
-
-2. 选择第一个源码包, 在 Linux 系统上使用 wget 下载.
-
-		wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz
-![e476766683cf5d13c0d14b77d3462fd2](https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/skylark/attach/1563/e476766683cf5d13c0d14b77d3462fd2)
-
-3. 解压缩, 编译安装 Python3, 安装需要用到 sudo 权限, 提前切换成有 sudo 权限的用户.
-
-```shell
-tar -zxvf Python-3.6.1.tgz
-cd cd Python-3.6.1
-./configure && make && sudo make install
-```
-<!--more-->
-安装完成后, terminal 中输入 python3 就能打开解释器
-```shell
-![image](https://zos.alipayobjects.com/rmsportal/PszFisfZeCxdpmwrZhRL.png)
 
 本文介绍在 Linux环境下, Python 环境开发需要配置的内容, 包括 python3 安装, virtualenv 配置, pip 等.
 
@@ -134,6 +110,7 @@ New python executable in /home/admin/git/great_python3_env/bin/python3.6
 Also creating executable in /home/admin/git/great_python3_env/bin/python
 Installing setuptools, pip, wheel...done.
 ```
+
 如果不需要当前环境的包, 使用 ```virtualenv nowamagic_venv --no-site-packages``` 进行安装
 
 - 最后, 激活该环境, 也可以将如下命令添加到 <code>~/.bashrc</code> 或者 <code>~/.zshrc</code> 中
