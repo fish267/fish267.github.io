@@ -6,6 +6,9 @@ categories: java
 tags:  
 ---
 
+![post-getting-started-with-spring-boot](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/30a8d073383ac85dc57e83c63f9691d1/post-getting-started-with-spring-boot.jpg)
+
+
 营销测试工具工程实现, 基于<code> SpringBoot </code>, 码了一段时间, 整理一下笔记, 真的**特别好用!!!** 最直观的感受有下面三方面:
 
 - 无 xml 配置!!!
