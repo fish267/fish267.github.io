@@ -650,6 +650,6 @@ spring:
 
 3. [Spring Boot中使用Spring-data-jpa让数据访问更简单、更优雅](http://blog.didispace.com/springbootdata2/)
 
-4. [stackoverflow--JPA 时间设置]((https://stackoverflow.com/questions/221611/creation-timestamp-and-last-update-timestamp-with-hibernate-and-mysql)
+4. [stackoverflow--JPA 时间设置](https://stackoverflow.com/questions/221611/creation-timestamp-and-last-update-timestamp-with-hibernate-and-mysql)
 
 5. [https://github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot)
