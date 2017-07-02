@@ -25,7 +25,7 @@ tags: algorighm
 
 浏览器有个后退按钮, 每次点击, 跳转到最靠近当前页的 URL. (实际上, 进行的是 URLS 出栈操作).
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/d206f24af2a82bfa774e8918d854d653/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/oENDrmlXtdrDNQIDVHEf.png)
 
 <!--more-->
 
