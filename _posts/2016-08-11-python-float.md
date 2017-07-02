@@ -11,11 +11,11 @@ tags: work
 
 在验证网商营销平台时, 发现一个奇怪的打折卡
 
-![Screen_Shot_2016-08-10_at_21.46.55](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/promospring/6f0def261621b954f7335f686e3e7969/Screen_Shot_2016-08-10_at_21.46.55.png)
+![Screen_Shot_2016-08-10_at_21.46.55](https://gw.alipayobjects.com/zos/rmsportal/tOpYUuQAQowIzwAoCeeq.png)
 
 经排查, 服务端返回的是打折卡额度分别是 0.39, 0.49, 前端数值乘以 10 进行展示, <code>0.39 * 10 = 3.9000000000000004</code>, 在浏览器演示如下:
 
-![Screen_Shot_2016-08-10_at_21.51.00](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/promospring/b6d5b7b96f360a6c975fd365953c2f7d/Screen_Shot_2016-08-10_at_21.51.00.png)
+![Screen_Shot_2016-08-10_at_21.51.00](https://gw.alipayobjects.com/zos/rmsportal/NwvSVWCOMyGammHpkFXe.png)
 
 很明显是 Javascript 浮点运算精度问题, 那么为什么两个运算结果一个正常, 一个这么不正经呢?
 
@@ -27,7 +27,7 @@ Javascript 和 Python 都是弱类型语言, 以<code>0.1 + 0.2</code>为例, �
 
 在 CPython 解释器下, 得到的结果如下:
 
-![Screen_Shot_2016-08-10_at_22.14.15](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/promospring/c54e4bfef87f9bfa4d43f2a0ef5c4665/Screen_Shot_2016-08-10_at_22.14.15.png)
+![Screen_Shot_2016-08-10_at_22.14.15](https://gw.alipayobjects.com/zos/rmsportal/NENdkgykvdDkkPvPMWem.png)
 
 我们知道计算机都是二进制运算, 通过[进制转换工具](http://tool.oschina.net/hexconvert/), 或者文章末尾的 Python 计算函数<code>get_float_bin()</code>, 可以看到运算过程: 
 
