@@ -6,7 +6,7 @@ categories: java
 tags:  
 ---
 
-![post-getting-started-with-spring-boot](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/30a8d073383ac85dc57e83c63f9691d1/post-getting-started-with-spring-boot.jpg)
+![post-getting-started-with-spring-boot](https://gw.alipayobjects.com/zos/rmsportal/SsfeVuUTqWAFuUDeBfaz.jpg)
 
 
 营销测试工具工程实现, 基于<code> SpringBoot </code>, 码了一段时间, 整理一下笔记, 真的**特别好用!!!** 最直观的感受有下面三方面:
@@ -23,9 +23,9 @@ tags:
 
 <!--more-->
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/cloud_notes/0074c33e35472c695d627c1691471836/image.png)
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/cloud_notes/306586331500e42c7e17603dfa86742f/image.png)
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/cloud_notes/53129680a09a6cbebb616f8355672ab7/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/yuhULmWwmYVLzrSnzxsy.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/tpdXcMTNhkgOPVsDhFSt.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/IgKOcPTJWRuGMlwBJgRi.png)
 
 ## 1.2 官网创建工程
 
@@ -80,7 +80,7 @@ public class PromobootApplication {
 }
 ```
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/shiheng.fsh/cloud_notes/07be60c8fd5763ba4850806864c66669/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/ykTxEFestXQaepzIDVUl.png)
 
 <b>启动工程的方式有如下几个:</b>
 
@@ -112,14 +112,14 @@ mvn package
 java -jar target/promoboot-0.0.1-SNAPSHOT.jar
 ```
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/6913bef01b37bb9b627fec52f0fb22b4/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/cPvofjLrpbYBBdyWvqLf.png)
 
 ## 2.4 SpringBoot 热部署
 
 改完代码, 每次启动工程挺费时的, SpringBoot 支持热部署需要添加 <code>spring-boot-devtools</code> 依赖, 可以手动添加, 也可以在创建 SpringBoot 时勾选 DevTools, 如下图:
 
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/8d0cf593982b85e0f874c81a3213e58b/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/gzzsPtDwOfKFPEeJTnDb.png)
 
 
 
@@ -151,7 +151,7 @@ mvn spring-boot:run
 
 <b>另外, IDEA 设置一下字段编译, 如下图 </b>
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/748b590633cdfd7f1089c36ec95f5d9b/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/dvljHJzjpUHMqCxlWJlu.png)
 
 
 ## 2.5 开启本地 Debug 端口
@@ -195,7 +195,7 @@ server:
 
 新增 开发/测试/生产 配置文件: 
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/d296f18bc917029cf1c6e4fced834432/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/eKdgeGIxCGyzKjiBwVTm.png)
 
 配置 <code>application.properties</code> 中的内容, 比如启用 dev 环境, 设置 active = dev, 就启用了<code> application-dev.yaml</code> : 
 
@@ -308,11 +308,11 @@ Binding to target Apple{name='lol', size=20, cllor='', weight=300} failed:
 
 - SpringMVC 
 
-![rcontroller-mvc](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/77a5032e067c079990a793917b5a3117/rcontroller-mvc.jpg)
+![rcontroller-mvc](https://gw.alipayobjects.com/zos/rmsportal/UMmfQtixWepCkwDaiFuW.jpg)
 
 - SpringBoot
 
-![rcontroller-rest](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/2b8f2ab1d4370606619d382ea8dec013/rcontroller-rest.jpg)
+![rcontroller-rest](https://gw.alipayobjects.com/zos/rmsportal/WCYTjjeTrAuYlaWmJiSf.jpg)
 
 
 从上面两个图可见, 两个框架提供的功能是一样的, SpringBoot 更简单, 还挺好用:
@@ -429,7 +429,7 @@ public class RobotDO {
 
 启动 springboot 工程, 可以看到数据库中新增了表 robot
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/303a65d68066d8f880201ae6041989cc/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/rrBRWODCucGgCBGVdGEL.png)
 
 ### 5.2.5 测试代码
 
@@ -494,7 +494,7 @@ RobotDO{id=3, robotName='Wall-E', size='Huge', type='AI', gmtCreate=Tue May 30 1
 
 看一下数据库:
 
-![image](http://024028.oss-cn-hangzhou-zmf.aliyuncs.com/uploads/app_release/checkroute/7f3f2ee934d8f64fcf38aa930f71621e/image.png)
+![image](https://gw.alipayobjects.com/zos/rmsportal/mFiSXMkjtEeVBBAgOjRA.png)
 
 
 ### 5.2.5 事务操作
