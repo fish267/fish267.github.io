@@ -64,7 +64,9 @@ Coveralls 是用来显示项目代码覆盖率的.
            └── test_demo.py
 ```
 
-新建 <code>test_all.py</code> 文件夹, 用来执行所有的测试用例, 需要获取项目覆盖率, 依赖 coverage, 使用 `pip install -U coverage` 进行安装. 文件内容如下:
+新建 <code>test_all.py</code> 文件夹, 用来执行所有的测试用例, 需要获取项目覆盖率, 依赖 coverage, 使用
+
+ `pip install -U coverage` 进行安装. 文件内容如下:
 
 ```python
 #!/usr/bin/env python
@@ -101,7 +103,9 @@ if __name__ == '__main__':
 
 上面代码逻辑大概是定位到 <code>testcase</code> 目录,  `unittest.defaultTestLoader.discover` 找到并加装所有 `test*.py` 的文件, 最后调用 `unittest.TextTestRunner().run` 方法执行.
 
-`sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))` 这句话非常重要, 将 `test_all.py` 文件的上一级目录加载到 `sys.path` 中, 不然会报类找不到的.
+`sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))`
+
+这句话非常重要, 将 `test_all.py` 文件的上一级目录加载到 `sys.path` 中, 不然会报类找不到的.
 
 **在项目根目录, 执行下面命令, 将用例跑一遍:**
 
@@ -143,7 +147,9 @@ TOTAL                           26      2    92%
 
 ### 3.2 项目 .travis.yml 配置
 
-针对不同编程语言, travis 官网文档提供了不同的配置 demo, [https://docs.travis-ci.com/user/language-specific/](https://docs.travis-ci.com/user/language-specific/)
+针对不同编程语言, travis 官网文档提供了不同的配置 demo
+
+[https://docs.travis-ci.com/user/language-specific/](https://docs.travis-ci.com/user/language-specific/)
 
 Python 项目的配置如下:
 
