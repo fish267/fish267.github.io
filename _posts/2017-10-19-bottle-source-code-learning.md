@@ -133,7 +133,7 @@ twine upload  -u username -p password dist/six_web-1.0.0-py3-none-any.whl
 
 可以在服务器上直接看到上传的包了
 
-![](https://gw.alipayobjects.com/zos/rmsportal/xcaOSwPjUTcCUKaMbjDE.png)
+![](https://gw.alipayobjects.com/zos/rmsportal/DcNoQGvMjDsNODbrcmNN.png)
 
 # 参考资料
 
@@ -141,3 +141,4 @@ twine upload  -u username -p password dist/six_web-1.0.0-py3-none-any.whl
 2. [https://github.com/pypa/sampleproject](https://github.com/pypa/sampleproject)
 3. [https://stackoverflow.com/questions/26664102/why-can-i-not-create-a-wheel-in-python](https://stackoverflow.com/questions/26664102/why-can-i-not-create-a-wheel-in-python)
 4. [https://github.com/fish267/six-web](https://github.com/fish267/six-web)
+5. [https://pypi.python.org/pypi?name=six-web&version=1.0.0&:action=display](https://pypi.python.org/pypi?name=six-web&version=1.0.0&:action=display)
