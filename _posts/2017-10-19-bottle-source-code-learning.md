@@ -40,6 +40,7 @@ Pypi 服务, 类似 Java 的 maven 仓库, 用来托管开源的 Python 模块. 
 `-- tox.ini
 ``` 
 
+<!--more-->
 
 ## 1. 准备 setup.py
 
