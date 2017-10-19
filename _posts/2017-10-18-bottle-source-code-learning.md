@@ -193,7 +193,7 @@ python -m coverage combine
 python -m coverage report -m 2>&1
 ```
 
-上述配置可以在项目[https://github.com/fish267/six](https://github.com/fish267/six) 中查看.
+上述配置可以在项目[https://github.com/fish267/six-web](https://github.com/fish267/six-web) 中查看.
 
 提交代码后, 过一会儿就能收到持续集成的邮件, 也可以访问 [https://travis-ci.org/fish267/six](https://travis-ci.org/fish267/six) 查看构建历史.
 
