@@ -3,7 +3,7 @@ author: Fish
 layout: post
 title: Bottle 源码阅读(一) -- 使用 Travis CI 及 Coveralls 持续集成
 categories: python
-tags: algorighm
+tags: system_design 
 ---
 
 Clone 下来 Bottle 源码后, 逐个文件分析, 发现 `.travis.yml` 文件中的配置比较有意思, 如下图. Google 了一下, 发现是 Github 项目持续集成用的.
