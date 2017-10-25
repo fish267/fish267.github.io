@@ -1,7 +1,7 @@
 ---
 author: Fish
 layout: post
-title: Bottle 源码阅读(三) -- ArgumentParser, __slots__, __call__, templefile 模块使用
+title: Bottle 源码阅读(三) -- ArgumentParser, __slots__, __call__, templefile, @property 使用
 categories: python
 tags: system_design
 ---
@@ -263,4 +263,66 @@ class AppStack(list):
 >>> call.__call__()
 >>> call.value
 600
+```
+
+
+## 5. @property 使用
+
+property 在 python 中被称为 "属性函数", 具体的功能有以下两点: 
+
+- 类方法转换成属性, 通过 "实例化对象.类名" 进行调用
+- 重写属性的 setter 与 getter 方法
+
+
+### 类转换成属性
+
+```python
+class Pro():
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    @property
+    def fullname(self):
+        return 'Fullname is %s %s' % (self.last_name, self.first_name)
+
+
+if __name__ == '__main__':
+    pro = Pro('shiheng', 'feng')
+    print(pro.fullname)
+
+####
+Fullname is feng shiheng
+```
+
+### 可以替换 setter getter
+
+```python
+class Pro():
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+        self._value = None
+
+    @property
+    def fullname(self):
+        return 'Fullname is %s %s' % (self.last_name, self.first_name)
+
+    @property
+    def value(self):
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        self._value = value
+
+
+if __name__ == '__main__':
+    pro = Pro('shiheng', 'feng')
+    print(pro.value)
+    pro.value = 1024
+    print(pro.value)
+###
+None
+1024
 ```
