@@ -31,6 +31,8 @@ Hello world!
 hello finished executing
 ```
 
+<!--more-->
+
 如果一个函数上面多个 decorator, 可以这么理解:
 
 ```python
