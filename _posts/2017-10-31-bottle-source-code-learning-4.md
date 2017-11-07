@@ -6,7 +6,6 @@ categories: python
 tags: system_design
 ---
 
-
 ## 1. Python 注解使用
 
 高阶函数, 指的是能将函数当成入参来操作, Python 注解也是这么做的, 使用 `@` 符号, 让代码更简洁.
