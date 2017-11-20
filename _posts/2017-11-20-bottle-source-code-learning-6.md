@@ -195,4 +195,8 @@ six_server.start()
     <b>nmhai</b>"""
 ```
 
+# 3. 参考文档
+
+- [Let’s Build A Web Server](https://ruslanspivak.com/lsbaws-part1/)
+
 # END
