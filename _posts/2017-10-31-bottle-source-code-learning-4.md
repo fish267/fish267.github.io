@@ -1,7 +1,7 @@
 ---
 author: Fish
 layout: post
-title: Bottle 源码阅读(四) -- 注解, functools, load 配置
+title: Bottle 源码阅读(四) -- 注解, functools, yield, inspect
 categories: python
 tags: system_design
 ---
@@ -161,3 +161,105 @@ namespace: {'six_web': <module 'six_web' from '/Users/fish/Documents/GitHub/six-
 six_web version: 2.0.
 ```
 
+
+
+# 3. yield 使用
+
+yield 的作用就是把一个函数变成一个 generator，带有 yield 的函数不再是一个普通函数，Python 解释器会将其视为一个 generator. 主要的功能是节省内存.
+
+在 python2 中, `range(10)` 返回一个 `list`, 而 `xrange(10)` 返回的是 `iterable ` 对象, 在 `python3` 中, 直接使用 `range` 统一返回 `iterable` 对象.
+
+```python
+def fab(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        # print b
+        a, b = b, a + b
+        n = n + 1
+```
+
+输出如下:
+
+```python
+>>> f = fab(3)
+>>> f
+<generator object fab at 0x10de1f9e8>
+>>> next(f)
+1
+>>> f.__next__()
+1
+>>> f.__next__()
+2
+>>> f.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+```
+
+综合来讲, `yield` 的目的是中断函数, 返回当前的值, 当 `next(f)` or `f.__next__()` 或者在 `for` 循环时, 从中断位置继续向下走.
+
+挺好玩的!
+
+Bottle 源码中, 路由处理, 有这么一处用法:
+
+```python
+def yieldroutes(func):
+    """ Return a generator for routes that match the signature (name, args)
+    of the func parameter. This may yield more than one route if the function
+    takes optional keyword arguments. The output is best described by example::
+
+        a()         -> '/a'
+        b(x, y)     -> '/b/<x>/<y>'
+        c(x, y=5)   -> '/c/<x>' and '/c/<x>/<y>'
+        d(x=5, y=6) -> '/d' and '/d/<x>' and '/d/<x>/<y>'
+    """
+    path = '/' + func.__name__.replace('__', '/').lstrip('/')
+    spec = getargspec(func)
+    argc = len(spec[0]) - len(spec[3] or [])
+    path += ('/<%s>' * argc) % tuple(spec[0][:argc])
+    print(path)
+    yield path
+    for arg in spec[0][argc:]:
+        path += '/<%s>' % arg
+        print(path)
+        yield path
+```
+
+# 4. inspect 模块
+
+上面源码中有一句 `spec = getargspec(func)`, 为了弄清这行代码意思, 了解了一下 `inspect` 模块, 该模块提供一些有用的函数去帮助获取活动对象信息.
+
+## getargspec 用法
+
+`getargspec` 是获取函数入参的, 示例如下:
+
+```python
+>>> from inspect import getargspec
+>>> getargspec(f)
+ArgSpec(args=['a', 'b'], varargs='pos', keywords='named', defaults=(1,))
+>>> from inspect import getargspec
+>>> def f(a, b=1, *pos, **named):
+...     pass
+...
+>>> getargspec(f)
+ArgSpec(args=['a', 'b'], varargs='pos', keywords='named', defaults=(1,))
+```
+
+## 常用用法
+
+    inspect.ismodule
+    inspect.isclass
+    inspect.ismethod
+
+    inspect.getmembers()            返回 dict(), 获取 Object 中所有的对象.
+
+    inspect.getsource(hello)        查看整个模块hello的源代码
+
+    inspect.getsource(hello.w)      查看模块hello里面wo这个类的全部代码
+
+    inspect.getsource(hello.h)      查看模块内某个函数的代码
+
+    inspect.getsource(hello.w.g)    查看模块内某个类中函数的代码
+
+    inspect.getabsfile(hello)       查看模块的路径
