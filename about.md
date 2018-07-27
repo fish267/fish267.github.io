@@ -18,9 +18,11 @@ group: navigation
 + 爱读书，爱运动，爱开源
 + Life is short, enjoy python!
 
-## 我的理想
+
+## 理想
 
 + <b>Coding to change the world for better!</b>
+
 
 ## 联系方式
 
