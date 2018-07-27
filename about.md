@@ -16,8 +16,11 @@ group: navigation
 + 08年离开山东, 就读于西安
 + 12年离开西安, 杭州工作至今
 + 爱读书，爱运动，爱开源
-+ <b>Coding to change the world for better!</b>
 + Life is short, enjoy python!
+
+## 我的理想
+
++ <b>Coding to change the world for better!</b>
 
 ## 联系方式
 
