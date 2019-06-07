@@ -6,8 +6,7 @@ categories: book
 tags: skill
 ---
 
-![](https://img3.doubanio.com/view/subject/s/public/s29105145.jpg)
-
+![](https://gw.alipayobjects.com/mdn/rms_456118/afts/img/A*qa4STY7MAXwAAAAAAAAAAABkARQnAQ)
 
 
 本书最触动的地方, 在第六章的小节 "专注和投入至关重要", 回想自己打球多年, 进步始终缓慢, 就是缺少了动作定型练习, 摘要如下:
