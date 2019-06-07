@@ -6,7 +6,7 @@ categories: book
 tags: skill
 ---
 
-![](https://img3.doubanio.com/view/subject/l/public/s29105145.jpg)
+![](https://img3.doubanio.com/view/subject/s/public/s29105145.jpg)
 
 
 
