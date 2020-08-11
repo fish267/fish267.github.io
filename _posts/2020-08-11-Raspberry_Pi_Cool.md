@@ -1,7 +1,7 @@
 ---
 author: Fish
 layout: post
-title: Raspberry Usage
+title: 我的树莓派使用记录
 categories: diy 
 tags: linux
 ---
