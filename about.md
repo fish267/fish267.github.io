@@ -18,6 +18,10 @@ group: navigation
 + 爱读书，爱运动，爱开源
 + Life is short, enjoy python!
 
+## 年度目标
+
++ 2025 Tennis && Investment
+
 
 ## 理想
 
@@ -26,7 +30,7 @@ group: navigation
 
 ## 联系方式
 
-网站：[http://www.love67.net](http://www.love67.net)
+网站：[https://love67.top](https://love67.top)
 
 邮箱：[fsh267@gmail.com](mailto:'fsh67@gmail.com')
 	
